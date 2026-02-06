@@ -242,14 +242,14 @@
         .hero-logo-container {
             margin-bottom: 20px;
             text-align: center;
-	}
+		}
 	
-	.hero-logo {
+		.hero-logo {
             max-width: 200px;
             width: 80%;
             height: auto;
             margin: 0 auto;
-	}
+		}
         
         /* SECCIÓN DE SERVICIOS */
         .services {
@@ -793,6 +793,19 @@
         }
         
         /* RESPONSIVE DESIGN */
+        
+        @media (max-height: 450px) {
+                
+                .hero {
+                    margin-top: 60px;
+                    padding: 65px 0 70px;
+                }
+                
+                .hero-logo-container {
+                    display: none;
+                }
+        }
+        
         @media (max-width: 1200px) {
             .review-card {
                 min-width: 320px;
@@ -805,10 +818,40 @@
         }
         
         @media (max-width: 992px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #184c7e;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+                z-index: 1000;
+                border-top: 1px solid rgba(115, 255, 254, 0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: static;
+                margin-left: auto;
+                order: 2;
+            }
         
             .hero-logo {
-       	 max-width: 350px;
-       	 width: 70%;
+       	 		max-width: 350px;
+       	 		width: 70%;
             }
             
             .about-container,
@@ -919,13 +962,13 @@
             }
             
             .hero {
-                padding: 140px 0 80px;
+                padding: 80px 0 80px;
                 margin-top: 70px;
             }
             
             .hero-logo {
-       	 max-width: 300px;
-       	 width: 65%;
+       	 		max-width: 300px;
+       	 		width: 65%;
             }
             
             .hero h1 {
@@ -1100,6 +1143,12 @@
                 }
                 .whatsapp-float {
                     bottom: 15px;
+                }
+            }
+            
+            @media (max-height: 400px) {
+                .hero-logo-container {
+                    display: none;
                 }
             }
             
